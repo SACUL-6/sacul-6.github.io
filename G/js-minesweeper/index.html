@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <title>Minesweeper</title>
-  </head>
-  <body>
-    <a class="embedly-card" href="http://radovanjanjic.com/js-minesweeper/">Minesweeper</a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-  </body>
+<head>
+	<meta http-equiv="pragma" content="no-cache" />
+	<title>Minesweeper</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+	<script src="js/Event.js"></script>
+	<script src="js/TruncatedSquareBoardModel.js"></script>
+	<script src="js/TruncatedSquareBoardView.js"></script>
+	<script src="js/HexagonBoardModel.js"></script>
+	<script src="js/HexagonBoardView.js"></script>
+	<script src="js/BoardModel.js"></script>
+	<script src="js/BoardView.js"></script>
+	<script src="js/Board.js"></script>
+	<script src="js/Game.js"></script>
+</head>
+<body>
+
+<h1>MineSweeper</h1>
+
+<select id="type">
+	<option value="classic" selected="selected">Classic</option>
+	<option value="hexagonal">Hexagonal</option>
+	<option value="truncated-square">Truncated Square</option>
+</select>
+
+<select id="level">
+	<option value="beginner" selected="selected">Beginner</option>
+	<option value="intermediate">Intermediate</option>
+	<option value="expert">Expert</option>
+</select>
+
+<button onclick="Game.start();">Start</button>
+<!--<button onclick="Game.restart();">Restart</button> -->
+
+<div id="board"></div>
+
+</body>
 </html>
