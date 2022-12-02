@@ -1,4 +1,4 @@
-/* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
+/* Nothing here*/
 
-console.log("Javascript working.");
+console.log("Hello! Welcome to my site!");
+con
