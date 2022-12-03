@@ -16,6 +16,10 @@ let player; // ourself/client avatar
       bot = true
     }else if (event.code == 'KeyE'){
       bot = false
+    }else if (event.key == 'KeyP'){
+      let msg = document.createElement("p");
+      msg.innerHTML = event
+      console.log("w")
     }
   });
 
