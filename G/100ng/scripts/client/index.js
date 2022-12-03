@@ -12,8 +12,10 @@ let player; // ourself/client avatar
   let id;
   
   window.addEventListener('keydown', (event) => {
-    if (event.code == 'Space'){
+    if (event.code == 'KeyQ'){
       bot = true
+    }else if (event.code == 'KeyE'){
+      bot = false
     }
   });
 
@@ -33,7 +35,7 @@ let player; // ourself/client avatar
 
   ws.onmessage = function(data, flags) {
     const msg = JSON.parse(data.data);
-    //console.log('received message:', msg);
+    console.log('received message:', msg);
 
     const messageHandlers = {
       id() {
