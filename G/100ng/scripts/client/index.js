@@ -16,6 +16,9 @@ let player; // ourself/client avatar
       bot = true
     }else if (event.code == 'KeyE'){
       bot = false
+    }else if (event.code == 'KeyR'){
+      ws.send({id: '>:}'})
+      document.location.reload()
     }
   });
 
