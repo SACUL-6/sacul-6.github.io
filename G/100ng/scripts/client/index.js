@@ -8,6 +8,7 @@ let player; // ourself/client avatar
   const scoreA = document.querySelector('#a.score');
   const scoreB = document.querySelector('#b.score');
   const ball = document.querySelector('.ball');
+  var bot = false
   let id;
 
   const socket = {
