@@ -18,9 +18,10 @@ let player; // ourself/client avatar
       bot = false
     }else if (event.code == 'KeyP'){
       let msg = document.createElement("p");
-      msg.innerHTML = event
-      let insert = document.getElementById(chat")
-      alert(msg)
+      msg.innerHTML = bot
+      let insert = document.getElementById("chat");
+      insert.appendChild(msg);
+      ws.send({type: 'chat', id: id, })
     }
   });
 
