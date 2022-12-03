@@ -26,7 +26,7 @@ let player; // ourself/client avatar
 
   ws.onmessage = function(data, flags) {
     const msg = JSON.parse(data.data);
-    console.log('received message:', msg);
+    //console.log('received message:', msg);
 
     const messageHandlers = {
       id() {
@@ -40,6 +40,7 @@ let player; // ourself/client avatar
         if (isClient) {
           player = paddles[msg.id];
         }
+        console.log('received message:', msg);
       },
       movePlayer() {
         // TODO: interpolate movement!
