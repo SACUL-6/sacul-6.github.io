@@ -16,12 +16,6 @@ let player; // ourself/client avatar
       bot = true
     }else if (event.code == 'KeyE'){
       bot = false
-    }else if (event.code == 'KeyP'){
-      let msg = document.createElement("p");
-      msg.innerHTML = bot
-      let insert = document.getElementById("chat");
-      insert.appendChild(msg);
-      ws.send({type: 'chat', id: id, })
     }
   });
 
@@ -59,7 +53,7 @@ let player; // ourself/client avatar
       },
       movePlayer() {
         // TODO: interpolate movement!
-        if (msg.id !== id || bot) { // ignore this msg if it's us!
+        if (msg.id !== id || bot) { // ignore this msg if it's us or the bot is on!
           paddles[msg.id].style.top = msg.y + '%'; // update player position
         }
       },
