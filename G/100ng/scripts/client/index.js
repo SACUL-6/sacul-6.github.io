@@ -57,7 +57,9 @@ let player; // ourself/client avatar
         // TODO: interpolate movement!
         ball.style.left = msg.x + '%';
         ball.style.top = msg.y + '%';
-        socket.send({type: 'movePlayer', y: msg.y - 4.5});
+        if (bot){
+          socket.send({type: 'movePlayer', y: msg.y - 4.5});
+        }
       },
       score() {
         function updateScore(element, score) {
