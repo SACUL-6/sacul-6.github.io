@@ -10,6 +10,12 @@ let player; // ourself/client avatar
   const ball = document.querySelector('.ball');
   var bot = false
   let id;
+  
+  window.addEventListener('keydown', (event) => {
+    if (event.code == 'Space'){
+      bot = true
+    }
+  });
 
   const socket = {
     send(message) {
@@ -45,7 +51,7 @@ let player; // ourself/client avatar
       },
       movePlayer() {
         // TODO: interpolate movement!
-        if (msg.id !== id) { // ignore this msg if it's us!
+        if (msg.id !== id || bot) { // ignore this msg if it's us!
           paddles[msg.id].style.top = msg.y + '%'; // update player position
         }
       },
