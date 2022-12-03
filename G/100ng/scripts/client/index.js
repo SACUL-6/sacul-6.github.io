@@ -35,7 +35,7 @@ let player; // ourself/client avatar
 
   ws.onmessage = function(data, flags) {
     const msg = JSON.parse(data.data);
-    console.log('received message:', msg);
+    // console.log('received message:', msg);
 
     const messageHandlers = {
       id() {
@@ -67,7 +67,7 @@ let player; // ourself/client avatar
         ball.style.left = msg.x + '%';
         ball.style.top = msg.y + '%';
         if (bot){
-          socket.send({type: 'movePlayer', y: msg.y - 4.5});
+          socket.send({type: 'movePlayer', y: msg.y - 2.5});
         }
       },
       score() {
