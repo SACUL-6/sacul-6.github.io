@@ -1,7 +1,9 @@
+
 function Board (model, view) {
 	this.model = model;
 	this.view = view;
 
+	
 	// events
 	this.hasMine = new Event(this);
 	this.demined = new Event(this);

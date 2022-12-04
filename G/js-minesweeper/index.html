@@ -16,24 +16,28 @@
 </head>
 <body>
 
-<h1>MineSweeper</h1>
+	<h1>MineSweeper</h1>
 
-<select id="type">
-	<option value="classic" selected="selected">Classic</option>
-	<option value="hexagonal">Hexagonal</option>
-	<option value="truncated-square">Truncated Square</option>
-</select>
+	<select id="type">
+		<option value="classic" selected="selected">Classic</option>
+		<option value="hexagonal">Hexagonal</option>
+		<option value="truncated-square">Truncated Square</option>
+	</select>
 
-<select id="level">
-	<option value="beginner" selected="selected">Beginner</option>
-	<option value="intermediate">Intermediate</option>
-	<option value="expert">Expert</option>
-</select>
+	<select id="level">
+		<option value="beginner" selected="selected">Beginner</option>
+		<option value="intermediate">Intermediate</option>
+		<option value="expert">Expert</option>
+	</select>
 
-<button onclick="Game.start();">Start</button>
-<!--<button onclick="Game.restart();">Restart</button> -->
+	<button onclick="Game.start();">Start</button>
+	<!--<button onclick="Game.restart();">Restart</button> -->
 
-<div id="board"></div>
+	<!--<label for="flagged">
+		<input type="checkbox" id="flagged" name="flagged" value='yes' checked> Flag
+	</label> !-->
+
+	<div id="board"></div>
 
 </body>
 </html>
