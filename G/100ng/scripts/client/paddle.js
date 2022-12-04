@@ -1,10 +1,21 @@
-const createPaddle = function(game, socket, options) {
+const createPaddle = function(users, game, socket, options) {
+  const user = document.createElement('div');
+
   const paddle = document.createElement('div');
   paddle.style.left = options.x + '%';
   paddle.style.top = options.y + '%';
   paddle.classList.add('paddle');
   paddle.style.backgroundColor = options.color;
   game.appendChild(paddle);
+
+  user.name = document.createElement('p');
+  user.name.innerHTML = '--' + options.id;
+  user.paddle = document.createElement('div');
+  user.paddle.classList.add('paddle');
+  user.paddle.style.backgroundColor = options.color;
+  users.appendChild(user);
+  user.appendChild(user.paddle);
+  user.appendChild(user.name);
 
   // add mouse controls if this paddle is the one we (the player) are to control
   if (options.isClient) {

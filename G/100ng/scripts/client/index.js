@@ -2,6 +2,7 @@
 let paddles = {};
 let player; // ourself/client avatar
 
+
 (function startGame() {
   const ws = new WebSocket('wss://banjo.benjikay.com/100ng');
   const game = document.querySelector('#game');
@@ -10,6 +11,9 @@ let player; // ourself/client avatar
   const ball = document.querySelector('.ball');
   var bot = false
   let id;
+
+  
+  const users = document.querySelector('#users');
   
   window.addEventListener('keydown', (event) => {
     if (event.code == 'KeyQ'){
@@ -34,6 +38,7 @@ let player; // ourself/client avatar
   const destroy = function(playerId) {
     game.removeChild(paddles[playerId]);
     delete paddles[playerId];
+    
   };
 
   ws.onmessage = function(data, flags) {
@@ -46,13 +51,13 @@ let player; // ourself/client avatar
       },
       spawnPlayer() {
         const isClient = msg.id === id;
-        const options = {x: msg.x, y: msg.y, color: msg.color, isClient};
+        const options = {id: msg.id, x: msg.x, y: msg.y, color: msg.color, isClient};
 
-        paddles[msg.id] = createPaddle(game, socket, options);
+        paddles[msg.id] = createPaddle(users, game, socket, options);
         if (isClient) {
           player = paddles[msg.id];
         }
-        console.log('received message:', msg);
+        console.log('player joined:', msg);
       },
       movePlayer() {
         // TODO: interpolate movement!
@@ -61,6 +66,7 @@ let player; // ourself/client avatar
         }
       },
       destroyPlayer() {
+        console.log('player left:', msg);
         if (paddles[msg.id]) {
           destroy(msg.id);
         }

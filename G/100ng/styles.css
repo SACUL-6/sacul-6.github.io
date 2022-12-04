@@ -25,6 +25,10 @@ h3 {
   color: #f0f0f0;
 }
 
+p {
+  color:darkgray
+}
+
 /* 16:9 */
 #game {
   width: 98vw; /* 100 - (body margin * 2) */
