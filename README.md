@@ -1,1 +1,6 @@
-# I'm too lazy to add anything here :\
+# TODO:
+add shell shockers
+
+add cookie clicker
+
+bookmarklets?
