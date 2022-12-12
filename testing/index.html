@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Source Code</title>
+  </head>
+  <body>
+    <h1>Website Source Code</h1>
+    <div id="source-code"></div>
+    <script>
+      // create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      // specify the URL of the website you want to get the source code for
+      var url = prompt("Please enter the URL");
+
+      // open a new connection to the specified URL
+      xhr.open("GET", url, true);
+
+      // send the request
+      xhr.send();
+
+      // when the request is completed, handle the response
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          // get the source code of the website
+          var source = xhr.responseText;
+
+          // display the source code on the page
+          document.getElementById("source-code").innerHTML = "<pre>" + source + "</pre>";
+        }
+      }
+    </script>
+  </body>
+</html>
