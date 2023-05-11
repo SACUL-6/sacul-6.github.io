@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="index.js"></script>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img
+          id="earth"
+          src="https://media.graphassets.com/CqNntlMDRgKm9mYPIRNC"
+        />
+        <!--https://lh3.googleusercontent.com/a/AGNmyxab3Prk1tfhG28VxbwXwrtYorr5Mto_lQe5V9fBDg=s192-c-rg-br100-->
+      </a-assets>
+      <a-sky color="black"></a-sky>
+      <a-sphere
+        material="src:#earth; metalness: ; roughness: 1;"
+        radius="2"
+        position="0 1 -5"
+        animation="
+                property: rotation;
+                from: 0 0 0;
+                to: -360 360 -360;
+                dur: 2000;
+                easing: linear;
+                loop: true
+            "
+      ></a-sphere>
+    </a-scene>
+  </body>
+</html>

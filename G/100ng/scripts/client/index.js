@@ -21,7 +21,7 @@ let player; // ourself/client avatar
     }else if (event.code == 'KeyE'){
       bot = false
     }else if (event.code == 'KeyR'){
-      ws.send({id: '>:}'})
+      ws.send({id: 'Sry I crashed ur server'})
       document.location.reload()
     }
   });
