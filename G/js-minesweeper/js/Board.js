@@ -1,4 +1,3 @@
-
 function Board (model, view) {
 	this.model = model;
 	this.view = view;

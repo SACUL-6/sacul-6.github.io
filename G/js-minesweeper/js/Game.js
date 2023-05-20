@@ -1,5 +1,6 @@
 var GameState = {"PLAYING":1, "WIN":2, "LOST":3, "STOPPED": 4};
 
+
 var Game = {
 	board: null,
 	view: null,
