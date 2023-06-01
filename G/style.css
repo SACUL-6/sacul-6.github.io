@@ -1,0 +1,91 @@
+body {
+    background-color: #1c1c1c;
+    color: #c9c9c9;
+}
+a {
+    text-decoration: none;
+    color: #0084ff;
+  }
+.card-link {
+    height: 400px;
+    width: 300px;
+  }
+.card {
+    overflow: hidden;
+    background-color: #7a7a7a;
+    height: 400px;
+    width: 300px;
+    border-radius: 30px;
+}
+.card img { 
+    border-radius: 30px;
+    width: 300px;
+    height: 300px;
+}
+.card h3 {
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+.header {
+    overflow: hidden;
+    background-color: #363636;
+    padding: 20px 10px;
+  }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    background-color: #808080;
+    color: white;
+  }
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+  .flex-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    order: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
