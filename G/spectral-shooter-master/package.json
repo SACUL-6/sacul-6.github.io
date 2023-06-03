@@ -1,0 +1,43 @@
+{
+  "name": "spectral-shooter",
+  "version": "1.0.0",
+  "description": "Walk a fine line between the Spectral Dimension and Physical Dimension in this Twin Stick Shooter.",
+  "main": "index.html",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "bulid": "npm run build",
+    "postbuild": "node postbuild.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicksonzero/spectral-shooter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vicksonzero/spectral-shooter/issues"
+  },
+  "homepage": "https://github.com/vicksonzero/spectral-shooter#readme",
+  "devDependencies": {
+    "@effortlessmotion/html-webpack-inline-source-plugin": "^1.0.3",
+    "archiver": "^5.3.1",
+    "base64-inline-loader": "^2.0.1",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0",
+    "webpack-strip-block": "^0.3.0"
+  },
+  "dependencies": {
+    "canvas": "^2.9.3",
+    "kontra": "^8.0.0",
+    "readdirp": "^3.6.0"
+  }
+}
