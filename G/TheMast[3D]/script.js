@@ -1,4 +1,4 @@
-alert("WASD and mouse click/drag. Shift to run. Really the biggest thing to know is how to set the resolution. Press the number keys at any time to do so. My preference is resolution 2")
+alert("You can view and change controls in-game. Really the biggest thing to know is how to set the resolution. Press the number keys at any time to do so. My preference is resolution 2")
 
 /*!
 Parts of this script are from the TurboWarp Packager <https://packager.turbowarp.org/>, licensed as follows:
