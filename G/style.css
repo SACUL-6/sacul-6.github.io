@@ -13,9 +13,9 @@ a {
 .card {
     overflow: hidden;
     background-color: #7a7a7a;
-    height: 400px;
+    height: 300px;
     width: 300px;
-    border-radius: 30px;
+    border-radius: 75px;
 }
 .card img { 
     border-radius: 30px;
