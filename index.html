@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="picture.ico" />
-    
-    <script charset="UTF-8" src="//web.webpushs.com/js/push/287676f265bacd828ed79ba6afc0b1b1_1.js" async></script>
-    
-    <title>SACUL_6</title>
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- import the webpage's javascript file -->
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <!-- this is the start of content -->
-    <div class="header">
-      <a href="/" class="logo">SACUL_6</a>
-      <div class="header-right">
-        <a class="active" href="/">Home</a>
-        <a href="/testing/index.html">Chat Room</a>
-        <a href="/P/EmulatorJS-main/index.html">Emulator</a>
-        <a href="/G/index.html">Games</a>
-        <a href="/P/index.html">Extra</a>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="picture.ico" />
+  <script charset="UTF-8" src="//web.webpushs.com/js/push/287676f265bacd828ed79ba6afc0b1b1_1.js" async></script>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/G/style.css" />
+  <script src="script.js" defer></script>
+  <style>
+.intro {
+  text-align: center;
+  margin: 20px;
+}
+.intro h1 {
+  font-size: 36px;
+  color: #c9c9c9;
+}
+.intro p {
+  font-size: 18px;
+  color: #c9c9c9;
+}
+.card {
+  background-color: #7a7a7a;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  position: relative; /* Ensure positioning for the description */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card-description {
+  padding: 15px;
+  color: #ffffff;
+  background-color: #5a5a5a;
+  position: absolute; /* Positioning the description within the card */
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+.card-description h3 {
+  font-size: 24px;
+}
+.card-description p {
+  font-size: 16px;
+}
+.card-description a {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="/" class="logo">SACUL_6</a>
+    <div class="header-right">
+      <a class="active" href="/">Home</a>
+      <a href="https://pro-chat.glitch.me">Pro Chat</a>
+      <a href="/P/EmulatorJS-main/index.html">Emulator</a>
+      <a href="/G/index.html">Games</a>
+      <a href="/P/index.html">Extra</a>
     </div>
+  </div>
     
-    <h1 class="text-center">
-      Welcome
-    </h1>
-    <h3>
-      Use the navigation bar above to navigate
-    </h3>
+    <div class="intro">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my projects and learn more about my work. Here you'll find a selection of projects I've worked on.</p>
+    </div>
+
+    <div class="flex-container">
+        <a class="card-link" href="https://pro-ai.glitch.me/">
+            <div class="card">
+                <img src="https://i.imgur.com/SZFIBFt.png" alt="Pro AI">
+                <div class="card-description">
+                    <h3>Pro AI</h3>
+                    <p>A project showcasing advanced AI capabilities with interactive features. Dive into the world of AI and explore its potential applications.</p>
+                </div>
+            </div>
+        </a>
+
+        <a class="card-link" href="https://pro-chat.glitch.me/">
+          <div class="card">
+              <img src="https://cdn.glitch.global/8eb49894-4f96-4fc9-86be-51a11d9f6963/Icon-round.png?v=1702869640547" alt="Pro Chat">
+              <div class="card-description">
+                  <h3>Pro Chat</h3>
+                  <p>Pro Chat provides a secure space for communication. Featuring DMs, Replies, Channels, Bots, and more! Rebuilt from the ground up using Socket.IO</p>
+              </div>
+          </div>
+      </a>
+
+      <a class="card-link" href="https://routinehub.co/user/SACUL_6">
+        <div class="card">
+            <img src="https://blog.routinehub.co/content/images/2023/12/routinehub_2x.png" alt="Pro Chat">
+            <div class="card-description">
+                <h3>RoutineHub</h3>
+                <p>I make some Siri Shortcuts for IOS. You can find them here.</p>
+            </div>
+        </div>
+    </a>
+        <!-- Add more project cards below as needed -->
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-  new Crate({
-    server: '777918651009073152',
-    channel: '777918651009073154'
-  })
-</script>
-  </body>
+        new Crate({
+            server: '777918651009073152',
+            channel: '777918651009073154'
+        })
+    </script>
+</body>
 </html>
